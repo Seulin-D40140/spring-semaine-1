@@ -61,6 +61,11 @@ public class SpringShopJpaApplication implements CommandLineRunner
 //		}
 		
 		//exo 1.4
-		articleRepository.deleteById(3);
+//		articleRepository.deleteById(3);
+		
+		//exo 1.5
+//		articleRepository.update("s9", "samsung" , 500 , 1L);
+		
+		//exo 1.6
 	}
 }

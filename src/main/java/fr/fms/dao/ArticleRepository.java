@@ -2,7 +2,10 @@ package fr.fms.dao;
 
 import java.util.List;
 
+import javax.transaction.Transactional;
+
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 
@@ -29,4 +32,8 @@ public interface ArticleRepository  extends JpaRepository<Article,Long>
 	
 	//exo 1.4
 	public void deleteById(long id);
+	
+	//exo 1.5
+	@Transactional@Modifying@Query("update Article set description = :D, brand = :B, price = :P where id = :id")
+	void update(@Param("D") String description, @Param("B") String brand, @Param("P") double price , @Param("id") Long id);
 }
