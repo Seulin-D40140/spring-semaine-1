@@ -38,9 +38,17 @@ public class SpringShopJpaApplication implements CommandLineRunner{
 //		articleRepository.save( new Article("predator" , "msi" , 2600 , pc));
 //		articleRepository.save( new Article("galaxy tab" , "Samsung" , 650 , tablet));
 		
-		for (Article article : articleRepository.findByCategoryId(1))
-		{
-			System.out.println(article);
-		}
+//		for (Article article : articleRepository.findByCategoryId(1))
+//		{
+//			System.out.println(article);
+//		}
+		//exo 1.2
+//		System.out.println(articleRepository.findByDescription("s9"));
+//		
+//		for (Article article : articleRepository.findAll())
+//			{
+//				System.out.println(article);
+//			}
+		
 	}
 }
