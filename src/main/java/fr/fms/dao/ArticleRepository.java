@@ -22,4 +22,11 @@ public interface ArticleRepository  extends JpaRepository<Article,Long>
 	//exo 1.2
 	public List<Article> findByDescription(String description);
 	public List<Article> findAll();
+	
+	//exo 1.3
+	public List<Article> findByBrandAndDescriptionContains(String brand , String description); 
+	public List<Article> findByBrandAndDescription(String brand , String description); 
+	
+	//exo 1.4
+	public void deleteById(long id);
 }

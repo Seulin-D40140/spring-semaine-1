@@ -50,6 +50,6 @@ public class Article implements Serializable
 
 	public String toString()
 	{
-		return "article *** brand : " + this.brand + " ,  model : " +  this.description + " , prix : " + this.price;
+		return "article brand : " + this.brand + " ,  model : " +  this.description + " , prix : " + this.price;
 	}
 }

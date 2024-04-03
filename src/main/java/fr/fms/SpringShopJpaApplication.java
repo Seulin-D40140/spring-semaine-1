@@ -1,5 +1,6 @@
 package fr.fms;
 
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
@@ -7,11 +8,10 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 import fr.fms.dao.ArticleRepository;
 import fr.fms.dao.CategoryRepository;
-import fr.fms.entities.Article;
-import fr.fms.entities.Category;
 
 @SpringBootApplication
-public class SpringShopJpaApplication implements CommandLineRunner{
+public class SpringShopJpaApplication implements CommandLineRunner
+{
 	@Autowired
 	private CategoryRepository categoryRepository;
 	@Autowired
@@ -49,6 +49,18 @@ public class SpringShopJpaApplication implements CommandLineRunner{
 //			{
 //				System.out.println(article);
 //			}
+		//exo 1.3
+//		for (Article article : articleRepository.findByBrandAndDescriptionContains("samsung", "g"))
+//			{
+//				System.out.println(article);
+//			}
 		
+//		for (Article article : articleRepository.findByBrandAndDescription("samsung", "s10"))
+//		{
+//			System.out.println(article);
+//		}
+		
+		//exo 1.4
+		articleRepository.deleteById(3);
 	}
 }
