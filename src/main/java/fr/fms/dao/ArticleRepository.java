@@ -36,4 +36,10 @@ public interface ArticleRepository  extends JpaRepository<Article,Long>
 	//exo 1.5
 	@Transactional@Modifying@Query("update Article set description = :D, brand = :B, price = :P where id = :id")
 	void update(@Param("D") String description, @Param("B") String brand, @Param("P") double price , @Param("id") Long id);
+	
+	//exo01.6
+	public List<Article> findAllByOrderByCategoryAsc();
+	public List<Article> findAllByOrderByCategoryDesc();
+	
+	//exo 1.7
 }

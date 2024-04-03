@@ -8,6 +8,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 import fr.fms.dao.ArticleRepository;
 import fr.fms.dao.CategoryRepository;
+import fr.fms.entities.Article;
 
 @SpringBootApplication
 public class SpringShopJpaApplication implements CommandLineRunner
@@ -67,5 +68,15 @@ public class SpringShopJpaApplication implements CommandLineRunner
 //		articleRepository.update("s9", "samsung" , 500 , 1L);
 		
 		//exo 1.6
+//		for (Article article : articleRepository.findAllByOrderByCategoryAsc())
+//		{
+//			System.out.println(article);
+//		}
+//		for (Article article : articleRepository.findAllByOrderByCategoryDesc())
+//		{
+//			System.out.println(article);
+//		}
+		
+		//exo 1.7
 	}
 }
